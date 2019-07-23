@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: local
+
+telegram-token: 835906743:AAG_pe-b46zntEThz7Y77Pe8-8la32fuWlc
+
+---
+spring:
+  profiles: local
+
+logging:
+  path: log/ants-api
+
+server:
+  port: 8081
+
+---
+spring:
+  profiles: dev
+
+logging:
+  path: log/ants-api

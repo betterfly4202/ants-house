@@ -1,0 +1,3 @@
+rootProject.name = 'ants-house'
+
+include 'ants-api', 'ants-library'
