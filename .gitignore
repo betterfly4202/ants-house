@@ -39,3 +39,6 @@ generated
 
 ### dump ###
 *.hprof
+
+## token info
+application.yml
