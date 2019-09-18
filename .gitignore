@@ -42,3 +42,4 @@ generated
 
 ## token info
 resources/application.yml
+/src/main/resources/googleAuth.yml
