@@ -47,7 +47,7 @@ subprojects {
         annotationProcessor("org.projectlombok:lombok")
         testCompileOnly("org.projectlombok:lombok")
         testAnnotationProcessor("org.projectlombok:lombok")
-
+        testImplementation 'org.assertj:assertj-core:3.11.1'
         compile 'com.google.guava:guava:23.0'
     }
 }

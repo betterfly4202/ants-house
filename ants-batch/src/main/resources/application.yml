@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    active: local # 기본 환경 선택
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+
+google.sheet.id: 1xkftjH3E3bsZal4d2tHoq9czJD-HxAVeGHK7lvwBR9Q
+
+---
+spring:
+  profiles: local
+  #  datasource:
+  #    data: classpath:data-h2.sql # 시작할때 실행시킬 script
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+# dev 개발 환경
+---
+spring.profiles: dev
+spring:
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:8843?useSSL=false&autoReconnect=true&characterEncoding=UTF-8
+      username: betterfly
+      password: betterfly
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
+      ddl-auto: update
+
+# prd 배포 환경
+---
+spring.profiles: prd
+spring.profiles.include: prd-db
+
+server:
+  port: 8082
