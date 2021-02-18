@@ -9,6 +9,13 @@ spring:
 
 google.sheet.id: 1xkftjH3E3bsZal4d2tHoq9czJD-HxAVeGHK7lvwBR9Q
 
+acme:
+  remote-address: 192.168.1.1
+  security:
+    username: admin
+    roles:
+      - USER
+      - ADMIN
 ---
 spring:
   profiles: local
